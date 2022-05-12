@@ -6,11 +6,11 @@ interface BackGroundImageProps {
 
 export const GlobalStyle = createGlobalStyle<BackGroundImageProps>`
     html, body{
-        background: url(${props => props.BackGroundImage}) no-repeat;
+        background-image: url(${props => props.BackGroundImage});
         background-size: cover;
         background-position: center;
         height: 100%;
-        transition: .4s ease-in-out;
+        transition: ease-in-out .4s;
         overflow: hidden;
     };
     *{
