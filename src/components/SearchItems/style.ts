@@ -73,7 +73,7 @@ export const inputSearch = styled.div`
     }
 ` 
 
-type warningMessageProps = {
+interface warningMessageProps {
     warningOpacity: 0|1;
 }
 

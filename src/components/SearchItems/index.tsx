@@ -2,7 +2,7 @@ import * as Searchstyle from "./style"
 import { useState } from "react"
 import {APIconsume} from "../../helpers/APIconsume"
 
-type testeProps = {
+interface testeProps {
     toReceiveAPI: (json:{}) => void
 }
 
