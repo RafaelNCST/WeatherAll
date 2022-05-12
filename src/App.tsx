@@ -25,7 +25,6 @@ export const App = () => {
       const jsonInitialState = await APIconsume("Manaus")
       setSearchResult(jsonInitialState)
       setSearchState(true)
-      console.log(jsonInitialState)
     })();
   }, []);
 
