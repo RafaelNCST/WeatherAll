@@ -4,7 +4,7 @@ import SunBackGround from "../../assets/images/SunBackGround.jpg"
 import ThunderStormBackGround from "../../assets/images/ThunderstormBackGround.jpg"
 import RainBackGround from "../../assets/images/RainBackGround.jpg"
 import SnowBackGround from "../../assets/images/SnowBackGround.jpg"
-import OverCastBackGround from "../../assets/images/OverCastBackGround.png"
+import OverCastBackGround from "../../assets/images/OvercastBackGround.png"
 
 interface resultsProps {
     searchResult: any,
