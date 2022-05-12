@@ -1,12 +1,11 @@
 import * as Style from "./AppStyle"
-import {GlobalStyle} from "./GlobalStyles"
 
 import { SearchItems } from "./components/SearchItems"
 import { CardWeather } from "./components/CardWeather"
 import { HeaderComponent } from "./components/HeaderLogo"
+import { GlobalOptions } from "./components/GlobalOptions"
 
 import {APIconsume} from "./helpers/APIconsume"
-import { ImageHandler } from "./helpers/ImagesBackGroundHelper"
 
 import { useEffect, useState } from "react"
 
@@ -32,24 +31,7 @@ export const App = () => {
 
   return (
     <>
-      {searchState && searchResult.weather[0].main === "Clear" && searchResult.weather[0].icon === "01n" &&
-          <GlobalStyle BackGroundImage={ImageHandler.NightBackGround}/>
-      }
-      {searchState && searchResult.weather[0].main === "Clear" && searchResult.weather[0].icon !== "01n" &&
-          <GlobalStyle BackGroundImage={ImageHandler.SunBackGround}/>
-      }
-      {searchState && searchResult.weather[0].main === "Thunderstorm" &&
-          <GlobalStyle BackGroundImage={ImageHandler.ThunderStormBackGround}/>
-      }
-      {searchState && searchResult.weather[0].main === "Rain" &&
-          <GlobalStyle BackGroundImage={ImageHandler.RainBackGround}/>
-      }
-      {searchState && searchResult.weather[0].main === "Snow" &&
-          <GlobalStyle BackGroundImage={ImageHandler.SnowBackGround}/>
-      }
-      {searchState && searchResult.weather[0].main === "Clouds" &&
-          <GlobalStyle BackGroundImage={ImageHandler.OverCastBackGround}/>
-      }
+      <GlobalOptions searchResult={searchResult} searchState={searchState}></GlobalOptions>
       {searchState &&
         <HeaderComponent searchState={searchState} searchResult={searchResult}></HeaderComponent>
       }
